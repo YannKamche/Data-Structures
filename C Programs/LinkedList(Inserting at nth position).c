@@ -63,7 +63,7 @@ int main()
 	do{
 		Insert();
 		Display();
-		printf("\n\nDo you want to insert another node? ");
+		printf("\n\nDo you want to insert another node? 'y' or 'n'");
 		choice = getche();
 		
 	} while(choice != 'n');

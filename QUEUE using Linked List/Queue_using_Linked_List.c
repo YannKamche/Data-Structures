@@ -1,6 +1,6 @@
 /* Implementation of a Queue using Linked List
 Author: Kamche Yann Arnaud
-Date: 12/05/2022
+Date: 05/12/2022
 */
 
 #include<stdio.h>
@@ -38,7 +38,7 @@ void Enqueue(int x){
 
 //Dequeue removes an element from the queue
 void Dequeue(){
-		struct Node* temp = (struct Node*)malloc(sizeof(struct Node*));
+		struct Node* temp = front;
 		if (front == NULL){
 			emptyQueue();
 			return;
@@ -95,13 +95,31 @@ int endOfQueue(){
 //size of the Queue
 int sizeOfQueue(){
 	int count = 0;
-	struct Node* temp = (struct Node*)malloc(sizeof(struct Node*));
-	temp = front;
+	struct Node* temp = front;
+	
 	while(temp!= NULL){
 		count++;
 		temp = temp->next;
 	}
 	return count;
+}
+// Reverse Queue
+void Reverse()
+{
+	struct Node *current, *prev, *next;
+	current = front;
+	prev = NULL;
+	while (current!= NULL)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	rear = front;
+	front = current;
+	
+	Display();
 }
 
 int main(){
