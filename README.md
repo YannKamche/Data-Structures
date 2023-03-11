@@ -11,7 +11,7 @@ This repository contains implementation of some data structures and algorithms u
 
 ## Added a Rar file named Data Structure that contains all the c programs
 
-In here, you are gonna find all the codes I wrote concerning Algorithm.
+In here, you will find all the codes I wrote concerning the different Algorithm below: <br>
 - Queue using array and Linked List
 - Queue using circular array
 - Stack using array and Linked List
